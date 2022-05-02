@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Color</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    main{
+      display: flex;
+      height: 100vh;
+    }
+    main div{
+      display: flex;
+      width: 50%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 100%;
+    }
+    p{
+      width: 100%;
+      background-color: aliceblue;
+      text-align: center;
+      padding: 2% 0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hex"><p onclick="randomColorHex()"></p></div>
+    <div class="rgb"><p onclick="randomColorRgb()"></p></div>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

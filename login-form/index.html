@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+          <button type="button" class="toggle-btn" onclick="register()">Register</button>
+        </div>
+        <div class="social-icons">
+          <img src="/assets/fb.png" alt="Facebook" />
+          <img src="/assets/tw.png" alt="Twitter" />
+          <img src="/assets/gp.png" alt="Google Plus" />
+        </div>
+        <form id="login" class="input-group">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="User Id"
+            required
+          />
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Enter Password"
+            required
+          />
+          <input type="checkbox" class="check-box"><span>Remember Password</span>
+          <buttton type="submit" class="submit-btn">Log In</buttton>
+        </form>
+        <form id="register" class="input-group">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="User Id"
+            required
+          />
+          <input
+            type="email"
+            class="input-field"
+            placeholder="Email Id"
+            required
+          />
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Enter Password"
+            required
+          />
+          <input type="checkbox" class="check-box"><span>I agree to the term & conditions</span>
+          <buttton type="submit" class="submit-btn">Register</buttton>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const loginForm = document.getElementById("login");
+      const registerForm = document.getElementById("register");
+      const btn = document.getElementById("btn");
+
+      function register(){
+        registerForm.style.left = "50px";
+        loginForm.style.left = "-400px"
+        btn.style.left = "110px";
+      }
+      
+      function login() {
+        registerForm.style.left = "450px";
+        loginForm.style.left = "50px"
+        btn.style.left = "0%";
+
+      }
+    </script>
+  </body>
+</html>
